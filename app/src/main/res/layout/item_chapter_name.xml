@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="12dp"
+        android:fontFamily="@font/regular"
         android:textColor="@color/black"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,8 +20,11 @@
 
     <View
         android:id="@+id/bottom_line"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="@id/chapter_name"
         android:background="#756B5E"
+        app:layout_constraintStart_toStartOf="@id/chapter_name"
+        app:layout_constraintWidth_percent="0.7"
         app:layout_constraintTop_toBottomOf="@id/chapter_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
