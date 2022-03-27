@@ -12,8 +12,7 @@ import com.example.islami_final.R
 class SebhaFragment : Fragment() {
     lateinit var tasbihNumber: Button
     lateinit var zikrNumber: Button
-    var number: Int = 0
-    val tasbehNameList = listOf<String>("سبحان الله \n", "الحمد لله \n", "الله اكبر")
+    var Number: Int = 0
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,24 +27,31 @@ class SebhaFragment : Fragment() {
 
         zikrNumber.setOnClickListener(
             View.OnClickListener {
-                number++
-                tasbihNumber.text = number.toString()
+                Number++
+                tasbihNumber.text = Number.toString()
+                zikrName(Number)
             })
-        if (number == 0) {
-            zikrNumber.setText("الله اكبر")
-        } else if (number == 33) {
-            zikrNumber.setText("سبحان الله")
-        } else if (number == 66) {
-            zikrNumber.setText(" الحمد لله ")
-        } else {
-            number = 0
-            zikrNumber.setText("الله اكبر ")
-        }
+
+
     }
 
     private fun initViews() {
         tasbihNumber = requireView().findViewById(R.id.tasbih_number_button)
         zikrNumber = requireView().findViewById(R.id.zikr_button)
+    }
+
+    fun zikrName(number: Int = Number) {
+        if (number in 0..33) {
+            zikrNumber.setText("الله اكبر")
+        } else if (number in 33..66) {
+            zikrNumber.setText("سبحان الله")
+        } else if (number in 66..99) {
+            zikrNumber.setText(" الحمد لله ")
+        } else {
+            Number = 0
+            zikrNumber.setText("الله اكبر ")
+        }
+
     }
 
 }
