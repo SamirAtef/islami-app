@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_sura_details">
+    tools:showIn="@layout/activity_hadith_details">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sura_recycler"
+        android:id="@+id/hadith_content_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/rounded_white_rectangle"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:elevation="0dp"
         android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.9"
-        tools:listitem="@layout/item_verse" />
-
+        tools:listitem="@layout/item_hadith_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

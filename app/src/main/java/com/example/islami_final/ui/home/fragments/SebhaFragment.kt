@@ -49,7 +49,6 @@ class SebhaFragment : Fragment() {
             zikrNumber.setText(" الحمد لله ")
         } else {
             Number = 0
-            zikrNumber.setText("الله اكبر ")
         }
 
     }
