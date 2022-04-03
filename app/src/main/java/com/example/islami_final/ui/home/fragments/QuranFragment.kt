@@ -140,10 +140,12 @@ class QuranFragment : Fragment() {
 
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: SoraNameAdapter
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
     }
+
 
     fun initRecyclerView() {
         recyclerView = requireView().findViewById(R.id.quran_recycler_view)
